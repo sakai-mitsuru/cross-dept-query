@@ -120,10 +120,10 @@ class RecaiusAuth:
 	baseurl = "https://api.recaius.jp/auth/v2"
 	def __init__(self, service_id, password):
 		url = RecaiusAuth.baseurl + "/tokens"
-		
+
 		# サービスごとのアカウントをここで与える
 		user = {"service_id": service_id, "password": password}
-		
+
 		# 知識探索用
 		#values = {"knowledge_explorer": user}
 		values = {
@@ -138,7 +138,7 @@ class RecaiusAuth:
 			the_page = handler.read()
 		result = json.loads(the_page.strip())
 		self.token = result["token"]
-		
+
 		#テスト挿入
 		#six.print_("self.token =" + self.token)
 
@@ -287,7 +287,7 @@ class KnowledgeDB:
 			"text":six.b("It happens to be an could")
 		}
 
-		urlp = BaseInfo.inputForSearchDoc		
+		urlp = BaseInfo.inputForSearchDoc
 
 		p = "query=" + urllib.parse.quote_plus(urlp ,encoding="utf-8")
 
@@ -612,7 +612,8 @@ def main():
 			#組織横断検索クエリー生成用入力データ。ここでは内部データをセットしてるが、
 			#arg経由で外部データをセットする方法でも可能。
 
-			questionToCrossDept = "EXCELについて詳しい人"
+			# questionToCrossDept = "EXCELについて詳しい人"
+			questionToCrossDept = sys.argv[1]
 
 			resultList = kdb.createQueryForSearchDoc(BaseInfo.dbname, questionToCrossDept)
 			six.print_(resultList)
@@ -625,5 +626,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
-

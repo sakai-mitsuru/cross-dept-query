@@ -1,6 +1,19 @@
 # CrossDeptQuery
 
-組織横断クエリ生成用　参考サンプルの補足
+## Usage
+```bash
+### cmd prompt using
+$ chcp 65001
+$ set PYTHONIOENCODING=utf-8
+$ node index.js
+```
+
+- - - - -
+
+以下、MT開よりの情報  
+
+# 組織横断クエリ生成用
+参考サンプルの補足
 
 
 ## 配置
@@ -10,7 +23,8 @@
 なお、最近のpython.exeはsixライブラリはもともと同梱されている場合もあるようです。）
 
 
-## 設定情報：プログラムファイルの冒頭付近にあるので、指定の値を設定する。
+## 設定情報：
+プログラムファイルの冒頭付近にあるので、指定の値を設定する。
 service_id：RECAIUS知識探索サービスID
 password：同パスワード
 dbid:知識DB ID
