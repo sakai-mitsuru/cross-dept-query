@@ -588,11 +588,12 @@ class KnowledgeDB:
 			elif len(keywordListForSearchDoc) == 1:
 				finalKeywordListForSearchDoc.append(["0", keywordListForSearchDoc[0]])
 
+			finalKeywordListForSearchDoc = json.dumps(finalKeywordListForSearchDoc,ensure_ascii=False)
 			return finalKeywordListForSearchDoc
 
 		except Exception as e:
-			return []
-
+			finalKeywordListForSearchDoc = json.dumps([],ensure_ascii=False)
+			return finalKeywordListForSearchDoc
 
 
 ####メイン関数###############################################################

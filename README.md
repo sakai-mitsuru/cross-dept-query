@@ -25,13 +25,14 @@ $ node index.js
 
 ## 設定情報：
 プログラムファイルの冒頭付近にあるので、指定の値を設定する。
-service_id：RECAIUS知識探索サービスID
-password：同パスワード
-dbid:知識DB ID
-uuName：アクセスユーザネーム
-dbname： ※知識DB新規作成する場合に所望のnameを記入。それ以外の用途の場合はダミー名でも可。
-proxies：今のところtsolのプロキシに設定していますが、必要に応じて変更して下さい。
-
+```
+"service_id"：RECAIUS知識探索サービスID  
+"password"：同パスワード  
+"dbid"    : 知識 DB ID  
+"uuName"  ：アクセスユーザネーム  
+"dbname"  ： ※知識DB新規作成する場合に所望のnameを記入。それ以外の用途の場合はダミー名でも可。  
+"proxies" ：今のところtsolのプロキシに設定していますが、必要に応じて変更して下さい。  
+```
 
 ## 動作環境
 　環境 python 3.5
