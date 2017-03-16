@@ -1,5 +1,6 @@
 /**
  * cmd prompt using
+ *   not use powershell console
  * chcp 65001
  * set PYTHONIOENCODING=utf-8
  */
@@ -61,7 +62,7 @@ module.exports = pShellOn;
 if(require.main === module){
   // debug sample
   var sample = () =>{
-    var file_path = 'CrossDeptQuery.py'
+    var file_path = PY_FILE_NAME
     run(file_path);
   }
   //sample();
