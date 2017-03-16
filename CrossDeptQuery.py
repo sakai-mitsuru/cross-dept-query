@@ -572,21 +572,21 @@ class KnowledgeDB:
 
 
 			if len(keywordListForSearchDoc) >= 4:
-				finalKeywordListForSearchDoc.append(["0", keywordListForSearchDoc[0]])
-				finalKeywordListForSearchDoc.append(["1", keywordListForSearchDoc[1]])
-				finalKeywordListForSearchDoc.append(["2", keywordListForSearchDoc[2]])
-				finalKeywordListForSearchDoc.append(["3", keywordListForSearchDoc[3]])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[0])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[1])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[2])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[3])
 
 			elif len(keywordListForSearchDoc) == 3:
-				finalKeywordListForSearchDoc.append(["0", keywordListForSearchDoc[0]])
-				finalKeywordListForSearchDoc.append(["1", keywordListForSearchDoc[1]])
-				finalKeywordListForSearchDoc.append(["2", keywordListForSearchDoc[2]])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[0])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[1])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[2])
 
 			elif len(keywordListForSearchDoc) == 2:
-				finalKeywordListForSearchDoc.append(["0", keywordListForSearchDoc[0]])
-				finalKeywordListForSearchDoc.append(["1", keywordListForSearchDoc[1]])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[0])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[1])
 			elif len(keywordListForSearchDoc) == 1:
-				finalKeywordListForSearchDoc.append(["0", keywordListForSearchDoc[0]])
+				finalKeywordListForSearchDoc.append(keywordListForSearchDoc[0])
 
 			finalKeywordListForSearchDoc = json.dumps(finalKeywordListForSearchDoc,ensure_ascii=False)
 			return finalKeywordListForSearchDoc
